@@ -25,7 +25,7 @@ export default function Recipelist({ recipes_list }) {
                     recipes_list.map((recipeitems) => (
                         <Card className="md:mx-0 mx-1 my-5">
                             <CardHeader>
-                            <Link href={`/recipe/${recipeitems.id}`}>   <Image src={recipeitems.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" /></Link> 
+                            <Link href={`/recipe/${recipeitems.id}`}><Image key={recipeitems.id} src={recipeitems.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" /></Link> 
                             </CardHeader>
                             <CardContent>
                             <Link href={`/recipe/${recipeitems.id}`}>   <CardTitle key={recipeitems.id} className="text-center">{recipeitems.name}</CardTitle></Link>
