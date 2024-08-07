@@ -16,7 +16,7 @@ export default async function singleRecipePage({params}) {
     const single_recipes_list = await SingleRecipe(params.singleRecipe);
     return (
         <div>
-            <SingleRecipeList single_recipes_list={single_recipes_list} />
+            <SingleRecipeList key={single_recipes_list.id}  single_recipes_list={single_recipes_list} />
         </div>
     );
 }

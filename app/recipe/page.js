@@ -5,7 +5,7 @@ export default async function recipe() {
     const recipes_list = await recipelist();
     return (
         <div>
-            <Recipelist recipes_list={recipes_list} />
+            <Recipelist key={recipes_list.id} recipes_list={recipes_list} />
         </div>
     );
 }
