@@ -6,7 +6,7 @@ const audiowide = Audiowide({ subsets: ["latin"], weight: '400' });
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-full">
       <div className={audiowide.className}>
         <h1 className="text-center uppercase md:text-6xl text-3xl mt-extra-wide">namaste <span className="text-[#d7d9ce]">recipes</span> </h1>
       </div>

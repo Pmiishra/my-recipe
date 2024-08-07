@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
     return (
-        <div className="text-center my-extra-wide h-screen">
+        <div className="text-center my-extra-wide h-full">
             <h1 className="text-bold md:text-6xl text-xl my-less-wide">
                 Failed to load ......
             </h1>
