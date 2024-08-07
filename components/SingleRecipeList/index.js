@@ -13,7 +13,7 @@ import {
 const audiowide = Audiowide({ subsets: ["latin"], weight: '400' });
 
 export default function SingleRecipeList({ single_recipes_list }) {
-    // console.log(single_recipes_list);
+    
 
     return (
         <div className="pb-10 px-5">
@@ -29,7 +29,7 @@ export default function SingleRecipeList({ single_recipes_list }) {
                         <Link href={`/recipe/${single_recipes_list.id}`}>   <Image src={single_recipes_list.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" key={single_recipes_list.id} /></Link>
                     </CardHeader>
                     <CardContent>
-                        <Link href={`/recipe/${single_recipes_list.id}`}>   <CardTitle key={single_recipes_list.id} className="text-center">{single_recipes_list.name}</CardTitle></Link>
+                        <Link href={`/recipe/${single_recipes_list.id}`}><CardTitle key={single_recipes_list.id} className="text-center">{single_recipes_list.name}</CardTitle></Link>
                         <CardDescription key={single_recipes_list.id} className="m-3 text-justify">{single_recipes_list.instructions[1]}</CardDescription>
                     </CardContent>
                     <CardFooter className="flex justify-between mx-4">
