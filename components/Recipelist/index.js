@@ -24,10 +24,14 @@ export default function Recipelist({ recipes_list }) {
                     recipes_list.map((recipeitems) => (
                         <Card className="md:mx-0 mx-1 my-5">
                             <CardHeader>
-                                <Link href={`/recipe/${recipeitems.id}`}><Image key={recipeitems.id} src={recipeitems.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" /></Link>
+                                <Link href={`/recipe/${recipeitems.id}`}>
+                                    <Image key={recipeitems.id} src={recipeitems.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" ></Image>
+                                </Link>
                             </CardHeader>
                             <CardContent>
-                                <Link href={`/recipe/${recipeitems.id}`}>   <CardTitle key={recipeitems.id} className="text-center">{recipeitems.name}</CardTitle></Link>
+                                <Link href={`/recipe/${recipeitems.id}`}>
+                                    <CardTitle key={recipeitems.id} className="text-center">{recipeitems.name}</CardTitle>
+                                </Link>
                                 <CardDescription key={recipeitems.id} className="m-3 text-justify">{recipeitems.instructions[1]}</CardDescription>
                             </CardContent>
                             <CardFooter className="flex justify-between mx-4">
@@ -35,6 +39,7 @@ export default function Recipelist({ recipes_list }) {
                                 <h6 key={recipeitems.id} className="font-bold" > {recipeitems.mealType} </h6>
                             </CardFooter>
                         </Card>
+
                     ))
                 }
 

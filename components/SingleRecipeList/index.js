@@ -13,7 +13,7 @@ import {
 const audiowide = Audiowide({ subsets: ["latin"], weight: '400' });
 
 export default function SingleRecipeList({ single_recipes_list }) {
-    
+
 
     return (
         <div className="pb-10 px-5">
@@ -26,10 +26,14 @@ export default function SingleRecipeList({ single_recipes_list }) {
             <div className="md:flex  gap-10 justify-evenly">
                 <Card className="md:my-0 my-16">
                     <CardHeader>
-                        <Link href={`/recipe/${single_recipes_list.id}`}>   <Image src={single_recipes_list.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" key={single_recipes_list.id} /></Link>
+                        <Link href={`/recipe/${single_recipes_list.id}`}>
+                            <Image src={single_recipes_list.image} alt="this is image" width={500} height={100} className=" transition duration-500 ease-in-out transform-all  hover:scale-105 rounded" key={single_recipes_list.id} />
+                        </Link>
                     </CardHeader>
                     <CardContent>
-                        <Link href={`/recipe/${single_recipes_list.id}`}><CardTitle key={single_recipes_list.id} className="text-center">{single_recipes_list.name}</CardTitle></Link>
+                        <Link href={`/recipe/${single_recipes_list.id}`}>
+                            <CardTitle key={single_recipes_list.id} className="text-center">{single_recipes_list.name}</CardTitle>
+                        </Link>
                         <CardDescription key={single_recipes_list.id} className="m-3 text-justify">{single_recipes_list.instructions[1]}</CardDescription>
                     </CardContent>
                     <CardFooter className="flex justify-between mx-4">
@@ -39,27 +43,17 @@ export default function SingleRecipeList({ single_recipes_list }) {
                 </Card>
 
                 <Card>
-                    
-                        <CardHeader>
-                            <CardTitle key={single_recipes_list.id} className="text-center mb-10 mt-5 tracking-wider  "> {single_recipes_list.name}</CardTitle>
-                            <CardTitle key={single_recipes_list.id} className="text-center text-md tracking-wider"> Cuisine : {single_recipes_list.cuisine}</CardTitle>
-                        </CardHeader>
-                    
+
+                    <CardHeader>
+                        <CardTitle key={single_recipes_list.id} className="text-center mb-10 mt-5 tracking-wider  "> {single_recipes_list.name}</CardTitle>
+                        <CardTitle key={single_recipes_list.id} className="text-center text-md tracking-wider"> Cuisine : {single_recipes_list.cuisine}</CardTitle>
+                    </CardHeader>
+
                     <CardContent>
                         <CardDescription key={single_recipes_list.id} className="m-3 mt-10 text-justify"><span className="underline">Ingredients</span> :  {single_recipes_list.ingredients[0]} , {single_recipes_list.ingredients[1]} , {single_recipes_list.ingredients[2]} , {single_recipes_list.ingredients[3]} , {single_recipes_list.ingredients[4]} , {single_recipes_list.ingredients[5]} .</CardDescription>
 
 
-                        <CardDescription key={single_recipes_list.id} className="m-3 text-justify md:mb-0 mb-10"> <span className="underline">Instructions</span> :
-                            <ul className="list-disc md:ml-medium-wide md:mt-0 mt-2 ml-5">
-                                <li key={single_recipes_list.id}>{single_recipes_list.instructions[0]} </li>
-                                <li key={single_recipes_list.id}>{single_recipes_list.instructions[1]}</li>
-                                <li key={single_recipes_list.id}>{single_recipes_list.instructions[2]}</li>
-                                <li key={single_recipes_list.id}>{single_recipes_list.instructions[3]}</li>
-                                <li key={single_recipes_list.id}>{single_recipes_list.instructions[4]}</li>
-                                <li key={single_recipes_list.id}>{single_recipes_list.instructions[5]}</li>
-                            </ul>
-
-                        </CardDescription>
+                        <CardDescription key={single_recipes_list.id} className="m-3 text-justify md:mb-0 mb-10"> <span className="underline">Instructions</span> : {single_recipes_list.instructions[0]} , {single_recipes_list.instructions[1]} , {single_recipes_list.instructions[2]} , {single_recipes_list.instructions[3]} , {single_recipes_list.instructions[4]} ,  {single_recipes_list.instructions[5]}  </CardDescription>
 
                         <CardDescription key={single_recipes_list.id} className="m-3 text-justify"><span className="underline">PrepTimeMinutes</span> : {single_recipes_list.prepTimeMinutes}</CardDescription>
 
